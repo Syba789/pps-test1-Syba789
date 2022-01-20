@@ -1,32 +1,43 @@
 /*comparing three numbers using pass by value*/
 #include<stdio.h>
-int input()
-{
-  int a;
-  scanf("%d",&a);
-  return a;
-}
 int cmp(int a,int b,int c)
 {
-  if(a>b&&a>c);
-  return a;
-  else if(b>a&&b>c);
-  return b;
-  else if(c>a&&c>b);
-  return c;
+  if(a>b)
+  {
+    if(a>c)
+    {
+      return a;
+    }
+    else
+    {
+      return c;
+    }
+  }
+  else
+  {
+    if(b>c)
+    {
+      return b;
+    }
+    else
+    {
+      return c;
+    }
+  }
 }
-void output(int result)
+int input()
 {
-printf("%d is the greatest",result);
+  int x;
+  scanf("%d",&x);
+  return x;
 }
 int main()
 {
-  int a,b,c,result;
-  printf("enter three numbers\n");
+  int a,b,c,large;
+  printf("enter the three numbers\n");
   a=input();
   b=input();
   c=input();
-  result=cmp(a,b,c);
-  output(result);
-  return 0;
+  large=cmp(a,b,c);
+  printf("%d is the largest of the three\n",large);
 }
