@@ -1,32 +1,28 @@
 #include<stdio.h>
-int input_n()
+int input()
 {
-  int n;
-  scanf("%d",&n);
-  return n;
+  int x;
+  scanf("%d",&x);
+  return x;
 }
 int sum_n(int n)
 {
-  int sum=0;
-  for(int i=1; i<=n; i++);
-  {
-    sum = sum + i;
-  }
-  return sum;
+  int r=0;
+  r=(n*(n+1))/2;
+  return r;
 }
 void output(int n,int sum)
 {
-  for(int i=1; i<=n; i++);
+  printf("1");
+  for(int f=2;f<n;f=f+1)
   {
-
+    printf("+%d is %d\n",n,sum);
   }
-printf("sum of %d numbers is %d\n",n,sum);
 }
 int main()
 {
   int n,sum;
-  printf("enter maximum value\n");
-  input_n;
+  n=input();
   sum=sum_n(n);
   output(n,sum);
   return 0;
