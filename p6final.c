@@ -1,17 +1,17 @@
 #include<stdio.h>
 int input()
 {
-  int x;
-  scanf("%d",&x);
-  return x;
+ int x;
+ scanf("%d",&x);
+ return x; 
 }
 int sum_n(int n)
 {
   int r=0;
-  r=(n*(n+1))/2;
+  r=(n*(n+1)\2);
   return r;
 }
-void output(int n,int sum)
+void ouput(int n,int sum)
 {
   printf("1");
   for(int f=2;f<n;f=f+1)
@@ -23,7 +23,8 @@ int main()
 {
   int n,sum;
   n=input();
-  sum=sum_n(n);
+  sum=sum_n();
   output(n,sum);
   return 0;
 }
+
